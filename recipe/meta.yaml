@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/manisandro/gImageReader/releases/download/v{{ version }}/gimagereader-{{ version }}.tar.xz
   sha256: b55cfe9212fa16bf2d5a7ca0fc549454812b265ac7d4aa34697947b20eecf425
-  patches:
-    - gimagereader-automoc.patch
 
 build:
   number: 0
