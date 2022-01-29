@@ -1,5 +1,5 @@
 {% set name = "gimagereader-qt" %}
-{% set version = "3.3.1" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/manisandro/gImageReader/releases/download/v{{ version }}/gimagereader-{{ version }}.tar.xz
-  sha256: 7688c9c20cbf2fa4f5b6ba0a8d77bd8d2e5929882ed965c7c07ccc529673f0dd
+  sha256: b55cfe9212fa16bf2d5a7ca0fc549454812b265ac7d4aa34697947b20eecf425
   patches:
     - gimagereader-quazip1.patch
     - gimagereader-automoc.patch
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not linux]
 
 requirements:
@@ -70,7 +70,7 @@ requirements:
     - quazip
     - sane
     - tesseract
-    
+
 test:
   commands:
     - test -f $PREFIX/bin/gimagereader-qt5
