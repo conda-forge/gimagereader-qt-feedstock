@@ -1,11 +1,11 @@
-About gimagereader-qt
-=====================
+About gimagereader-qt-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gimagereader-qt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/manisandro/gImageReader
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gimagereader-qt-feedstock/blob/main/LICENSE.txt)
 
 Summary: gImageReader is a simple Gtk/Qt front-end to tesseract-ocr
 
