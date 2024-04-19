@@ -2,6 +2,10 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '12'
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
 cdt_name:
 - cos7
 channel_sources:
@@ -15,14 +19,14 @@ cxx_compiler_version:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 libxml2:
-- '2.11'
+- '2'
 libzip:
 - '1'
 pin_run_as_build:
   poppler:
     max_pin: x.x
 poppler:
-- '23.07'
+- '24.03'
 qt_main:
 - '5.15'
 target_platform:
@@ -30,3 +34,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - c_stdlib_version
+  - cdt_name
