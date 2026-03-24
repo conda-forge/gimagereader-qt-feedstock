@@ -10,7 +10,7 @@ source:
   sha256: 8c57a60113b14b9f94dce20a8394a59cb8df2acb57f80d0e5c6f2e31ed5ee2a4
 
 build:
-  number: 6
+  number: 7
   skip: true  # [not linux]
 
 requirements:
@@ -29,12 +29,6 @@ requirements:
     - {{ stdlib("c") }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
   host:
     - xorg-libxfixes  # [linux]
     - djvulibre
@@ -52,6 +46,7 @@ requirements:
     - quazip
     - sane
     - tesseract
+    - libgl-devel                    # [linux]
   run:
     - djvulibre
     - enchant
