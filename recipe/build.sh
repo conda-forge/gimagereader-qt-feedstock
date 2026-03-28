@@ -1,12 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-mkdir build
-cd build
-cmake -G Ninja \
-      ${CMAKE_ARGS} \
-      -DCMAKE_INSTALL_PREFIX=$PREFIX \
-      -DCMAKE_INSTALL_LIBDIR=lib \
-      -DINTERFACE_TYPE=qt5 \
-      ..
-cmake --build . -- -j${CPU_COUNT}
-cmake --install .
+set -o xtrace -o nounset -o pipefail -o errexit
+
+cmake -B build -S ${SRC_DIR} -G Ninja \
+      -DINTERFACE_TYPE=qt6 \
+      ${CMAKE_ARGS}
+cmake --build build -- -j${CPU_COUNT}
+cmake --install build

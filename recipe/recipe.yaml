@@ -1,0 +1,84 @@
+schema_version: 1
+
+context:
+  version: "3.4.3"
+
+package:
+  name: gimagereader-qt
+  version: ${{ version }}
+
+source:
+  url: https://github.com/manisandro/gImageReader/releases/download/v${{ version }}/gimagereader-${{ version }}.tar.xz
+  sha256: 8c57a60113b14b9f94dce20a8394a59cb8df2acb57f80d0e5c6f2e31ed5ee2a4
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - autoconf
+    - automake
+    - cmake
+    - intltool
+    - pkg-config
+    - ninja
+  host:
+    - djvulibre
+    - enchant
+    - iso-codes
+    - libcap
+    - libnsl
+    - libtool
+    - libxmlplusplus
+    - libxml2
+    - libzip
+    - podofo
+    - poppler
+    - poppler-qt
+    - qt6-main
+    - qtspell
+    - quazip
+    - sane
+    - tesseract
+    - if: linux
+      then:
+        - libgl-devel
+        - xorg-libxfixes
+        - libgomp
+    - if: osx
+      then:
+        - llvm-openmp
+  # run:
+  #   - djvulibre
+  #   - enchant
+  #   - iso-codes
+  #   - libnsl
+  #   - libxmlplusplus
+  #   - libxml2
+  #   - libzip
+  #   - podofo
+  #   - poppler
+  #   - poppler-qt
+  #   - qt6-main
+  #   - qtspell
+  #   - quazip
+  #   - sane
+  #   - tesseract
+
+tests:
+  - script:
+      - gimagereader-qt5 --help
+
+about:
+  license: GPL-3.0-only
+  license_file: COPYING
+  summary: gImageReader is a simple Gtk/Qt front-end to tesseract-ocr
+  homepage: https://github.com/manisandro/gImageReader
+
+extra:
+  recipe-maintainers:
+    - izahn
