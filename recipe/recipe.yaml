@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/manisandro/gImageReader/releases/download/v${{ version }}/gimagereader-${{ version }}.tar.xz
-  sha256: 8c57a60113b14b9f94dce20a8394a59cb8df2acb57f80d0e5c6f2e31ed5ee2a4
+  sha256: 4604b53e8d952c68ce4198d7b8d864327ef6afaf597e7909f6b31f0eb9b4c425
 
 build:
   number: 0
