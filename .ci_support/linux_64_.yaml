@@ -26,7 +26,7 @@ pin_run_as_build:
   poppler:
     max_pin: x.x
 poppler:
-- '24.07'
+- '24.08'
 qt_main:
 - '5.15'
 target_platform:
